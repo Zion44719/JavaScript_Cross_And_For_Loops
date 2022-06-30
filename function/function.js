@@ -120,19 +120,43 @@
 
 // console.log(monthName);
 
-// const btns = document.querySelectorAll(".btn");
-// const counter = document.querySelector("#cat");
+const btns = document.querySelectorAll(".btn");
+const counter = document.querySelector("#cat");
 
-// let count = 0;
+let count = 0;
 
-// btns.forEach((btn) => {
-//   btn.addEventListener("click", (e) => {
-//     const style = e.currentTarget.classList;
-//     if (style.contains("inc")) {
-//       count++;
-//     }
-//     console.log(btn);
+btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const style = e.currentTarget.classList;
+    if (style.contains("inc")) {
+      count++;
+    } else if (style.contains("dec")) {
+      count--;
+    } else if (style.contains("res")) {
+      count = 0;
+    }
+    console.log(btn);
 
-//     counter.textContent = count;
-//   });
-// });
+    counter.textContent = count;
+  });
+});
+
+////////////////////////////////////
+// Function and Parameter
+
+// function birthYear(myAge) {
+//   return 2022 - myAge;
+// }
+
+// let birthDay = birthYear(1999);
+
+// console.log("My Age Is:", birthDay);
+
+// function transferRef(alias) {
+//   let generatedNum = Math.floor(Math.random() * 3000000);
+
+//   let ref = `${alias}${generatedNum}`;
+//   console.log(ref);
+// }
+
+// transferRef("215");

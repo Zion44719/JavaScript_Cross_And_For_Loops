@@ -39,14 +39,17 @@
 //   console.log(i);
 // }
 
+// Cyclying Through Array Using For Loop Start
 // let socialApp = ["twitter", "facebook", "2go", "whats app"];
-// // console.log(socialApp[3]);
+// console.log(socialApp[3]);
 
 // for (let i = 0; i < socialApp.length; i++) {
 //   console.log(socialApp[i]);
 // }
 
 // for loop function
+// let socialApp = ["twitter", "facebook", "2go", "whats app"];
+
 // function socialAppLooper(arr) {
 //   for (let i = 0; i < arr.length; i++) {
 //     console.log(arr[i]);
@@ -57,10 +60,12 @@
 
 // looking for something in the array
 
+// let socialApp = ["twitter", "facebook", "2go", "whats app"];
+
 // function socialAppLooper(arr, type) {
 //   for (let i = 0; i < arr.length; i++) {
 //     if (arr[i] === type) {
-//       console.log(arr[i] + " " + "is at position:" + i);
+//       console.log(arr[i] + " ", "Is in Position", i);
 //     }
 //   }
 // }
@@ -75,6 +80,8 @@
 //     console.log(i);
 //   }
 // };
+
+// Cyclying Through Array Using For Loop End
 
 // comparison operator
 // for (let i = 1; i < 30; i++) {
@@ -336,3 +343,30 @@
 //   count += 1;
 // }
 // console.log(count);
+
+// breaking out of condition and expression
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 == 0) {
+//     console.log("working loop index:", i);
+//   } else if (i % 5 == 0) {
+//     console.log("index number", i);
+//   }
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 == 0) {
+//     console.log("working loop index:", i);
+//   } else if (i % 5 == 0) {
+//     console.log("index number", i);
+//     break;
+//   }
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 === 0) {
+//     console.log("working loop index:", i);
+//   } else if (i % 5 === 0) {
+//     console.log("index number", i);
+//     continue;
+//   }
+// }

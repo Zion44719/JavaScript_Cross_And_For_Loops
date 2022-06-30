@@ -1,32 +1,38 @@
 "use strict";
 /////////////////////////////////////////////////////
 // while loop
-// let sum = 0;
-// let i = 0
-// while (i <= 10) {
-//   sum += i
-//   console.log(i, sum)
-//   i++
-// };
-// console.log(sum);
+// let count = 1;
+// while (count < 10) {
+//   console.log("while loop:", count);
+//   count += 1;
+// }
 
-// let sum = 0;
-// let i = 0
+// let sumNumber = 0;
+// let i = 0;
 // while (i <= 10) {
-//   sum += i
-//   console.log(i, sum)
-//   i += 5
-// };
+//   sumNumber += i;
+//   console.log("Adding:", i, sumNumber);
+//   i++;
+// }
+// console.log(sumNumber);
 
-// let sum = 0;
-// let i = 0
+// let sumNumber = 0;
+// let i = 0;
 // while (i <= 10) {
-//   if (i % 2 == 1) {
-//     sum += i
-//     console.log(i, sum)
-//   }
-//   i++
-// };
+//   sumNumber += i;
+//   console.log("Adding:", i, sumNumber);
+//   i += 5;
+// }
+
+let sumNumber = 0;
+let i = 0;
+while (i <= 10) {
+  if (i % 2 == 1) {
+    sumNumber += i;
+    console.log("Adding:", i, sumNumber);
+  }
+  i++;
+}
 
 // Break
 // let sum = 0;
