@@ -1,0 +1,29 @@
+.card{
+    background-color: rgba(3, 3, 3, 0.607);
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    margin: 0 auto;
+
+    border: 2px solid red;
+    padding: 30px;
+    border-radius: 10px ;
+}
+
+
+form input{
+    outline: none;
+    border: none;
+    border-left: 2px solid red;
+    caret-color: red;
+    
+}

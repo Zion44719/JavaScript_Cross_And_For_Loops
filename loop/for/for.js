@@ -370,3 +370,54 @@
 //     continue;
 //   }
 // }
+
+///////////////////Task//////////////////////
+// to rotate an array
+
+// function textRotateLeft(textRotate) {
+//   return [
+//     textRotate[1],
+//     textRotate[2],
+//     textRotate[3],
+//     textRotate[4],
+//     textRotate[5],
+//     textRotate[0],
+//   ];
+// }
+
+// console.log(textRotateLeft([2, 3, 4, 5]));
+// console.log(textRotateLeft([2, 3, 4, 5, 6, 7]));
+
+// OR
+
+// let textRotate = [2, 3, 4, 5, 6, 7];
+// let N = textRotate.length;
+// let K = 1;
+
+// function textRotateLeft(textRotate, N, K) {
+//   K = K % N;
+//   for (let i = 0; i < N; i++) {
+//     if (i < K) {
+//       console.log(textRotate[N + i - K] + " ");
+//     } else {
+//       console.log(textRotate[i - K] + " ");
+//     }
+//   }
+// }
+
+// textRotateLeft(textRotate, N, K);
+
+let arrayText = [1, 2, 4, 5, 6];
+let n = arrayText.length;
+let miss = missingNumber(arrayText, n);
+
+function missingNumber(text, n) {
+  let total = Math.floor(((n + 1) * (n + 2)) / 2);
+  for (let i = 0; i < n; i++) {
+    total -= text[i];
+  }
+  return total;
+}
+// console.log(missingNumber(arrayText, n));
+
+console.log(miss);

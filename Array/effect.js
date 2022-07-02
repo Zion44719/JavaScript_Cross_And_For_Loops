@@ -1,3 +1,5 @@
+"use strict";
+
 // Array methods
 
 // let kinplusClass = ["class", "book", "pen"];
@@ -140,12 +142,12 @@
 
 // console.log(classWork3);
 
-let kin = [
-  [4, 6, 7],
-  ["keep", "up", "start"],
-  ["key1", "key2", "key3"],
-  ["boy1", "boy2"],
-];
+// let kin = [
+//   [4, 6, 7],
+//   ["keep", "up", "start"],
+//   ["key1", "key2", "key3"],
+//   ["boy1", "boy2"],
+// ];
 
 // key2 = delete kin[2][1];
 // kinRem = kin[2];
