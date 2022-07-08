@@ -11,11 +11,11 @@
 // 3. By TagName
 // let titleText = document.getElementsByTagName
 
-let para = document.querySelector(".array");
+// let para = document.querySelector(".array");
 
-para.innerText += " Okay";
-// Or
-para.innerText = " Okay";
+// para.innerText += " Okay";
+// // Or
+// para.innerText = " Okay";
 
 // let questions = [
 //   {

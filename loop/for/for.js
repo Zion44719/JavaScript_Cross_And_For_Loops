@@ -407,7 +407,7 @@
 
 // textRotateLeft(textRotate, N, K);
 
-let arrayText = [1, 2, 4, 5, 6];
+let arrayText = [1, 2, 3, 4, 5, 6, 8];
 let n = arrayText.length;
 let miss = missingNumber(arrayText, n);
 
@@ -421,3 +421,27 @@ function missingNumber(text, n) {
 // console.log(missingNumber(arrayText, n));
 
 console.log(miss);
+/*
+Looping through an object's properties in arbitary order
+*/
+// const users = {
+//   1: "Oluwafemi",
+//   2: "Oluwatosin",
+//   3: "Dominic",
+//   4: "Ojasope",
+// };
+
+// for (let prop in users) {
+//   console.log(prop);
+// }
+
+// for (let prop in users) {
+//   console.log(users[prop]);
+// }
+
+// for (let prop in users) {
+//   if (users[prop] === "Oluwafemi") {
+//     users[prop] = "Joshua";
+//   }
+//   console.log(users[prop]);
+// }
