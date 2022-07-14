@@ -39,3 +39,9 @@ document.documentElement.style.setProperty("--color-primary", "orangered");
 
 // Changing Attribute
 // logo.alt = "Zion";
+
+// Working with classes
+theVariableName.classList.add("zionhilt");
+theVariableName.classList.remove("zionhilt");
+theVariableName.classList.toggle("zionhilt");
+theVariableName.classList.contains("zionhilt");

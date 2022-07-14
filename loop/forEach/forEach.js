@@ -19,7 +19,6 @@
 // });
 
 // For in loop
-
 const drinks = ["coffee", "coke", "fanta", "7up", "malta", "5alive", "eva"];
 
 // for (let key in drinks) {
@@ -41,3 +40,32 @@ const drinks = ["coffee", "coke", "fanta", "7up", "malta", "5alive", "eva"];
 //     console.log("Okay");
 //   }
 // }
+
+// Still not get the example:
+// function Counter() {
+//   this.count = 0;
+//   let self = this;
+//   return {
+//     increase: function () {
+//       self.count++;
+//     },
+//     current: function () {
+//       return self.count;
+//     },
+//     reset: function () {
+//       self.count = 0;
+//     },
+//   };
+// }
+
+// let counter = new Counter();
+// let numbers = [1, 2, 3];
+// let sum = 0;
+
+// counter.forEach(function (e) {
+//   sum += e;
+//   this.increase();
+// }, counter);
+
+// console.log(sum); // 6
+// console.log(counter.current()); // 3
