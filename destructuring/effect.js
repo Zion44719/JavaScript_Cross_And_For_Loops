@@ -50,11 +50,17 @@ const [resultOutPut] = foodFilterArray(
   ["fish", "chicken", "tofu", "titus"],
   "fish"
 );
-console.log(resultOutPut);
+// console.log(resultOutPut);
+
 // reuse the function
 const [resultOutPut2] = foodFilterArray(
   ["cookies", "cake", "chocolate", "chesse"],
-  "cookies",
   "cake"
 );
-console.log(resultOutPut2);
+// console.log(resultOutPut2);
+
+// can ignore/skipped some values
+const anotheArr = [20, 30, 40, 150, 60, 100, 10];
+
+const [numA, numB, , numC, numD] = anotheArr;
+console.log(`first: ${numA}, second: ${numB}, third: ${numC}, fourth: ${numD}`);
