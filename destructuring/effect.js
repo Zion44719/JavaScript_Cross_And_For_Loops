@@ -90,7 +90,7 @@ const myObj = {
   height: "2ft",
 };
 
-const { firstName, secondName, age, height } = myObj;
+// const { firstName, secondName, age, height } = myObj;
 // console.log(firstName, " and ", secondName, "Our age is", age, height);
 
 // creating data before assigning it
@@ -136,7 +136,7 @@ const member2 = { memeberType: "free" };
 
 // sayIfValid(myObj6);
 
-// Oor
+// Object Literaly Destructure
 function sayIfValid({ prop, term }) {
   const internalObj = {
     prop,
@@ -152,4 +152,148 @@ const myObj6 = {
   term: "I am also not",
 };
 
-console.log(sayIfValid(myObj6));
+// console.log(sayIfValid(myObj6));
+
+// Nested Object
+const myObj7 = {
+  title1: "My address book",
+  entries: [
+    {
+      firstName: "Zion",
+      phoneNumber: "3268-4859",
+      homeAddress: "123 Main St",
+    },
+  ],
+  myPhone: "555-1234",
+};
+// To grab something out of the nested object
+const {
+  title1,
+  entries: [{ firstName: accessKey, homeAddress }],
+} = myObj7;
+
+// console.log(accessKey, homeAddress);
+
+const myObj8 = {
+  myProp1: "Testing Destructuring!",
+  myProp2: [35, 37],
+};
+
+const {
+  myProp1,
+  myProp2: [ay, az],
+} = myObj8;
+
+console.log(ay, az);
+
+// Another Example of destructuring a property and loop through
+const myObj9 = {
+  title2: "My address book",
+  cityEntries: [
+    {
+      city: "New York",
+      latitude: 40.7127837,
+      longitude: -74.0059413,
+      population: "8405837",
+      rank: "1",
+      state: "New York",
+    },
+    {
+      city: "Los Angeles",
+      latitude: 34.0522342,
+      longitude: -118.2436849,
+      population: "3884307",
+      rank: "2",
+      state: "California",
+    },
+    {
+      city: "Chicago",
+      latitude: 41.8781136,
+      longitude: -87.6297982,
+      population: "2718782",
+      rank: "3",
+      state: "Illinois",
+    },
+    {
+      city: "Houston",
+      latitude: 29.7604267,
+      longitude: -95.3698028,
+      population: "2195914",
+      rank: "4",
+      state: "Texas",
+    },
+  ],
+  myPhone: "555-1234",
+};
+
+const { title2, cityEntries } = myObj9;
+
+// Using for loop
+
+// for (const { city, population } of cityEntries) {
+//   console.log(`${city} city, has ${population} population`);
+// }
+
+// Or
+// this still runs and work perfectly
+// for (const { city: anotherKey, population: key2 } of cityEntries) {
+//   console.log(`${anotherKey} city, has ${key2} population`);
+// }
+
+// Example having object within the nested object
+const myObj10 = {
+  titleC: "My address book",
+  cityEntriesC: [
+    {
+      city: "New York",
+      latitude: 40.7127837,
+      longitude: -74.0059413,
+      population: "8405837",
+      rank: "1",
+      state: "New York",
+      other: {
+        cellPhone: "6190-0190",
+        emailAddress: "zionctech@gmail.com",
+      },
+    },
+    {
+      city: "Los Angeles",
+      latitude: 34.0522342,
+      longitude: -118.2436849,
+      population: "3884307",
+      rank: "2",
+      state: "California",
+      other: {
+        cellPhone: null,
+        emailAddress: "josther@gmail.com",
+      },
+    },
+    {
+      city: "Chicago",
+      latitude: 41.8781136,
+      longitude: -87.6297982,
+      population: "2718782",
+      rank: "3",
+      state: "Illinois",
+      other: {
+        cellPhone: "3805-9491",
+        emailAddress: null,
+      },
+    },
+  ],
+  myPhone: "555-1234",
+};
+
+const { titleC, cityEntriesC } = myObj10;
+
+// Using for loop
+
+for (const {
+  city: key1,
+  population: key2,
+  other: { cellPhone, emailAddress },
+} of cityEntriesC) {
+  console.log(
+    `${key1} city, has ${key2} population ${cellPhone} ${emailAddress}`
+  );
+}
