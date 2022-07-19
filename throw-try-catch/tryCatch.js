@@ -231,4 +231,38 @@ function finalExample() {
   }
 }
 
-console.log(finalExample());
+// console.log(finalExample());
+
+// Example 10
+// function lastExample(x, y) {
+//   if (typeof x !== Number) {
+//     throw "this must be a number";
+//   } else if (typeof y !== Number) {
+//     throw "this second arguement must be a number";
+//   }
+//   return x + y;
+// }
+
+// try {
+//   const result = lastExample(2, 10);
+//   console.log(result);
+// } catch (catchID) {
+//   console.log(catchID);
+// }
+
+// Example 11
+function lastExample(x, y) {
+  if (typeof x !== "number") {
+    throw "this must be a number";
+  } else if (typeof y !== "number") {
+    throw "this second arguement must be a number";
+  }
+  return x + y;
+}
+
+try {
+  const result = lastExample(7, "Testing");
+  console.log(result);
+} catch (catchID) {
+  console.log(catchID);
+}
