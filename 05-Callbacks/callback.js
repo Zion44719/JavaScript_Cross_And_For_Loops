@@ -135,15 +135,75 @@ const newsFeed = {
   news: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur distinctio dicta aspernatur earum",
 };
 
+const myPara = document.getElementById("secondContent");
+
 readMoreBtn.addEventListener("click", () => {
   fetchData(showDOM);
 });
 
 function fetchData(cb) {
-  const archive = newsFeed.news;
+  let archive = "Loading...";
   cb(archive);
+  setTimeout(() => {
+    archive = newsFeed.news;
+    cb(archive);
+  }, 2000);
 }
 
 function showDOM(archive) {
-  content.innerHTML += `<p>${archive}</p>`;
+  myPara.innerText = archive;
 }
+
+// Example 8
+// here we are having four callback in a function
+
+function counter() {
+  setTimeout(() => {
+    console.log("First");
+    setTimeout(() => {
+      console.log("Second");
+      setTimeout(() => {
+        console.log("Third");
+        setTimeout(() => {
+          console.log("Fourth");
+        }, 400);
+      }, 600);
+    }, 800);
+  }, 1000);
+}
+
+// counter();
+
+// Example 9
+function numCrunch1(num, cb) {
+  const newNum = num * num;
+  cb(newNum);
+}
+
+function numCrunch2(num, cb) {
+  const secondNewNum = num / 100;
+  cb(secondNewNum);
+}
+
+function totalSum(a, b, cb) {
+  cb(a + b);
+}
+
+function crunchNumbers(a, b, cb1, cb2, cb3) {
+  cb1(a, function (x) {
+    cb2(b, function (y) {
+      cb3(x, y, function (result) {
+        console.log(result);
+      });
+    });
+  });
+}
+
+// crunchNumbers(5, 10, numCrunch1, numCrunch2, totalSum);
+
+// Promises
+/*
+- promise is a proxy for a value not necesasarily known when the promise is created
+- Promises (similar to callbacks) are used for async computations
+- Promises representing a value that can be available now, later or never
+*/
