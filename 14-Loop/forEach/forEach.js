@@ -61,31 +61,9 @@ function userData() {
 
 userData();
 
-// Still not get the example:
-// function Counter() {
-//   this.count = 0;
-//   let self = this;
-//   return {
-//     increase: function () {
-//       self.count++;
-//     },
-//     current: function () {
-//       return self.count;
-//     },
-//     reset: function () {
-//       self.count = 0;
-//     },
-//   };
-// }
+// Example
+const fruits = ["orange", "apple", "strawberry", "mango"];
 
-// let counter = new Counter();
-// let numbers = [1, 2, 3];
-// let sum = 0;
-
-// counter.forEach(function (e) {
-//   sum += e;
-//   this.increase();
-// }, counter);
-
-// console.log(sum); // 6
-// console.log(counter.current()); // 3
+fruits.forEach((item) => {
+  console.log(item.toUpperCase());
+});

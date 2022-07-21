@@ -23,6 +23,8 @@ const outP = document.querySelector("#outP");
 let newCity2 = cityPopulation.filter((e) => e.population > 3000000);
 outP.innerHTML = JSON.stringify(newCity2);
 console.log(newCity2);
+// Or
+outP.innerHTML += `<p>${JSON.stringify(newCity2)}</p>`;
 
 // Examples 2.
 function foodFilterArray(arr, search) {

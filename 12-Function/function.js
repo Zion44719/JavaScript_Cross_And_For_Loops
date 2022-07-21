@@ -1,11 +1,13 @@
 "use strict";
 
+// Example 1
 // function logging() {
 //   console.log("My name is Oluwafemi");
 // }
 
 // logging();
 
+// Example 2
 // function fruitProcess(mango, apple) {
 //   console.log(mango, apple);
 //   const juiceProcess = `Blend ${mango} mangoes with ${apple} apples in a blender`;
@@ -19,6 +21,7 @@
 // console.log(juice);
 // console.log(fruitProcess(5, 7));
 
+// Example 3
 // function decleration
 // function calculateMyAge(birthYear) {
 //   return 2022 - birthYear;
@@ -26,6 +29,7 @@
 
 // const age = calculateMyAge(1987);
 
+// Example 4
 // function expression
 // const calculateMyAge2 = function (birthYear) {
 //   return 2022 - birthYear;
@@ -35,6 +39,7 @@
 
 // console.log(age, age2);
 
+// Example 5
 // Arrow Function
 // const calculateMyAge3 = (birthYear) => 2022 - birthYear;
 // const age3 = calculateMyAge3(1987);
@@ -107,19 +112,7 @@
 
 // console.log(weightStatus);
 
-// let month = 1;
-// let monthName;
-
-// if (month == 2) {
-//   monthName = "Feb";
-// } else if (month == 3) {
-//   monthName = "Mar";
-// } else {
-//   monthName = "Invaliad Month";
-// }
-
-// console.log(monthName);
-
+// Example
 const btns = document.querySelectorAll(".btn");
 const counter = document.querySelector("#cat");
 

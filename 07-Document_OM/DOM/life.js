@@ -84,7 +84,7 @@ function login() {
     username.value == userData.userName &&
     password.value == userData.password
   ) {
-    alert("login okay");
+    confirm("login okay");
   } else {
     alert("incorrect detail");
   }
