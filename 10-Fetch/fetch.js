@@ -54,30 +54,63 @@
 // }
 
 //Example 4
-const myDiv = document.getElementById("films");
-const myButton = document.querySelector(".btn");
+// const myDiv = document.getElementById("films");
+// const myButton = document.querySelector(".btn");
 
-myButton.addEventListener("click", getFilms);
+// myButton.addEventListener("click", getFilms);
 
-function getFilms() {
-  const randomNum = Math.floor(Math.random() * 10) + 1;
-  fetch(`https://swapi.dev/api/films/${randomNum}/`)
-    .then((data) => data.json())
-    .then((d) => populateFilm(d))
-    .catch((err) => {
-      console.log(err.message);
-    });
-}
+// function getFilms() {
+//   const randomNum = Math.floor(Math.random() * 10) + 1;
+//   fetch(`https://swapi.dev/api/films/${randomNum}/`)
+//     .then((data) => data.json())
+//     .then((d) => populateFilm(d))
+//     .catch((err) => {
+//       console.log(err.message);
+//     });
+// }
 
-function populateFilm(filmObj) {
-  const { title, director, producer } = filmObj;
-  const filmDiv = `
-  <div>
-  <h1>${title}</h1>
-  <p>
-  ${title} was directed by ${director} and the producer is ${producer}
-  </p>
-  </div>
-  `;
-  myDiv.innerHTML += filmDiv;
-}
+// function populateFilm(filmObj) {
+//   const { title, director, producer } = filmObj;
+//   const filmDiv = `
+//   <div>
+//   <h1>${title}</h1>
+//   <p>
+//   ${title} was directed by ${director} and the producer is ${producer}
+//   </p>
+//   </div>
+//   `;
+//   myDiv.innerHTML += filmDiv;
+// }
+
+// Example 5
+// This Example is just to show other films
+
+// const myDiv = document.getElementById("films");
+// const myButton = document.querySelector(".btn");
+
+// myButton.addEventListener("click", getFilms);
+
+// function getFilms() {
+//   const randomNum = Math.floor(Math.random() * 10) + 1;
+//   fetch(`https://swapi.dev/api/films/${randomNum}/`)
+//     .then((data) => data.json())
+//     .then((d) => populateFilm(d))
+//     .catch((err) => {
+//       console.log(err.message);
+//     });
+// }
+
+// function populateFilm(filmObj) {
+//   const { title, director, producer } = filmObj;
+//   const myFilmDiv = document.createElement("div");
+//   const filmDiv = `
+//   <h1>${title}</h1>
+//   <p>
+//   ${title} was directed by ${director} and the producer is ${producer}
+//   </p>
+//   `;
+//   myFilmDiv.innerHTML += filmDiv;
+//   myDiv.appendChild(myFilmDiv);
+// }
+
+// Example 6

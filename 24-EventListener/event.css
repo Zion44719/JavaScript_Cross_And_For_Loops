@@ -6,3 +6,30 @@
 h1 {
   text-align: center;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+  margin: 0 auto;
+
+  border: 2px solid red;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+form input {
+  outline: none;
+  border: none;
+  border-left: 2px solid red;
+  caret-color: red;
+}
+
+.showDOM {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}

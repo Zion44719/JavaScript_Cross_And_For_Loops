@@ -9,5 +9,5 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   //   console.log(firstName.value);
   //   console.log(userPassword.value);
-  showDOM.innerHTML += `Username ${firstName.value} while the password is ${userPassword.value}`;
+  showDOM.innerHTML += `Username: ${firstName.value} while the password is: ${userPassword.value}`;
 });
