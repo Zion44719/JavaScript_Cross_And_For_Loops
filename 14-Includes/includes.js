@@ -6,4 +6,4 @@
 let userEmail = "zionctech@gmail.com";
 
 console.log(userEmail.includes("zion"));
-console.log(userEmail.includes("olueafemi"));
+console.log(userEmail.includes("oluwafemi"));

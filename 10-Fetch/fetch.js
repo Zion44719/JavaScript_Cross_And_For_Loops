@@ -114,3 +114,207 @@
 // }
 
 // Example 6
+
+// const myDiv = document.getElementById("films");
+// const myButton = document.querySelector(".btn");
+
+// myButton.addEventListener("click", getFilms);
+
+// function getFilms() {
+//   const randomNum = Math.floor(Math.random() * 10) + 1;
+//   fetch(`https://swapi.dev/api/planets/${randomNum}/`)
+//     .then((data) => data.json())
+//     .then((d) => populateFilm(d))
+//     .catch((err) => {
+//       console.log(err.message);
+//     });
+// }
+
+// function populateFilm(filmObj) {
+//   const { name, climate, terrain, population, orbital_period } = filmObj;
+//   const filmDiv = `
+//  <div>
+//  <h1>${name}</h1>
+//  <p>
+//  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${population}. The orbital period is ${orbital_period} days.
+//  </p>
+//  </div>
+//   `;
+//   //   myDiv.insertAdjacentHTML("beforeend", filmDiv);
+//   //   myDiv.insertAdjacentHTML("afterbegin", filmDiv);
+//   //   myDiv.insertAdjacentHTML("beforebegin", filmDiv);
+//   myDiv.insertAdjacentHTML("afterend", filmDiv);
+//   console.log(filmObj);
+// }
+
+// Example 7
+// To transform long number into comma's
+
+// const myDiv = document.getElementById("films");
+// const myButton = document.querySelector(".btn");
+
+// myButton.addEventListener("click", getFilms);
+
+// function getFilms() {
+//   const randomNum = Math.floor(Math.random() * 10) + 1;
+//   fetch(`https://swapi.dev/api/planets/${randomNum}/`)
+//     .then((data) => data.json())
+//     .then((d) => populateFilm(d))
+//     .catch((err) => {
+//       console.log(err.message);
+//     });
+// }
+
+// function populateFilm(filmObj) {
+//   const { name, climate, terrain, population, orbital_period } = filmObj;
+//   let pop;
+//     if (population === "unknown") {
+//       pop = population;
+//     } else {
+//       pop = parseInt(population).toLocaleString();
+//     }
+//   const filmDiv = `
+//   <div>
+//   <h1>${name}</h1>
+//   <p>
+//   ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${pop}. The orbital period is ${orbital_period} days.
+//   </p>
+//   </div>
+//   `;
+
+//   myDiv.insertAdjacentHTML("beforeend", filmDiv);
+//   console.log(filmObj);
+// }
+
+// Example 9
+// Using teneray operator and interpolate between the backtick
+
+// const myDiv = document.getElementById("films");
+// const myButton = document.querySelector(".btn");
+
+// myButton.addEventListener("click", getFilms);
+
+// function getFilms() {
+//   const randomNum = Math.floor(Math.random() * 10) + 1;
+//   fetch(`https://swapi.dev/api/planets/${randomNum}/`)
+//     .then((data) => data.json())
+//     .then((d) => populateFilm(d))
+//     .catch((err) => {
+//       console.log(err.message);
+//     });
+// }
+
+// function populateFilm(filmObj) {
+//   const { name, climate, terrain, population, orbital_period } = filmObj;
+
+//   const filmDiv = `
+//  <div>
+//  <h1>${name}</h1>
+//  <p>
+//  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
+//     population === "unknown"
+//       ? population
+//       : parseInt(population).toLocaleString()
+//   }. The orbital period is ${orbital_period} days.
+//  </p>
+//  </div>
+//   `;
+
+//   myDiv.insertAdjacentHTML("beforeend", filmDiv);
+//   console.log(filmObj);
+// }
+
+// Example 10
+// Accessing (another url or page 2) inside our promise response using RegExp
+
+// const myDiv = document.getElementById("films");
+// const myButton = document.querySelector(".btn");
+// const mySecondButton = document.getElementById("otherButton");
+
+// myButton.addEventListener("click", getFilms);
+// mySecondButton.addEventListener("click", getPlanets);
+
+// function getPlanets() {
+//   fetch(`https://swapi.dev/api/planets/`)
+//     .then((data) => data.json())
+//     .then((planets) => {
+//       const { next } = planets;
+//       const newURL = next.replace(/^https:\/\//i, "https://");
+//       return fetch(newURL);
+//     })
+//     .then((morePlanets) => console.log(morePlanets));
+// }
+
+// function getFilms() {
+//   const randomNum = Math.floor(Math.random() * 10) + 1;
+//   fetch(`https://swapi.dev/api/planets/${randomNum}/`)
+//     .then((data) => data.json())
+//     .then((d) => populateFilm(d))
+//     .catch((err) => {
+//       console.log(err.message);
+//     });
+// }
+
+// function populateFilm(filmObj) {
+//   const { name, climate, terrain, population, orbital_period } = filmObj;
+
+//   const filmDiv = `
+//  <div>
+//  <h1>${name}</h1>
+//  <p>
+//  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
+//     population === "unknown"
+//       ? population
+//       : parseInt(population).toLocaleString()
+//   }. The orbital period is ${orbital_period} days.
+//  </p>
+//  </div>
+//   `;
+
+//   myDiv.insertAdjacentHTML("beforeend", filmDiv);
+//   console.log(filmObj);
+// }
+
+// Example 11
+// To loop over the API using for of
+
+const myDiv = document.getElementById("films");
+const mySecondButton = document.getElementById("otherButton");
+
+mySecondButton.addEventListener("click", getPlanets);
+
+function getPlanets() {
+  fetch(`https://swapi.dev/api/planets/`)
+    .then((data) => data.json())
+    .then((planets) => {
+      processingPlanets(planets.results);
+    });
+}
+// function to loop over the array
+
+function processingPlanets(planetsArray) {
+  console.log(planetsArray);
+  for (const prop of planetsArray) {
+    populatePlanets(prop);
+  }
+}
+
+// Function to show
+function populatePlanets(planetObj) {
+  const { name, climate, terrain, population, orbital_period } = planetObj;
+
+  const planetDiv = `
+ <div>
+ <h1>${name}</h1>
+ <p>
+ ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
+    population === "unknown"
+      ? population
+      : parseInt(population).toLocaleString()
+  }. The orbital period is ${orbital_period} days.
+ </p>
+ </div>
+  `;
+
+  myDiv.insertAdjacentHTML("beforeend", planetDiv);
+}
