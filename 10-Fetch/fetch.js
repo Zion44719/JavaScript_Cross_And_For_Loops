@@ -278,6 +278,155 @@
 // Example 11
 // To loop over the API using for of
 
+// const myDiv = document.getElementById("films");
+// const mySecondButton = document.getElementById("otherButton");
+
+// mySecondButton.addEventListener("click", getPlanets);
+
+// function getPlanets() {
+//   fetch(`https://swapi.dev/api/planets/`)
+//     .then((data) => data.json())
+//     .then((planets) => {
+//       processingPlanets(planets.results);
+//     });
+// }
+// // function to loop over the array
+
+// function processingPlanets(planetsArray) {
+//   console.log(planetsArray);
+//   for (const prop of planetsArray) {
+//     populatePlanets(prop);
+//   }
+// }
+
+// // Function to show
+// function populatePlanets(planetObj) {
+//   const { name, climate, terrain, population, orbital_period } = planetObj;
+
+//   const planetDiv = `
+//  <div class="planets">
+//  <h1>${name}</h1>
+//  <p>
+//  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
+//     population === "unknown"
+//       ? population
+//       : parseInt(population).toLocaleString()
+//   }. The orbital period is ${orbital_period} days.
+//  </p>
+//  </div>
+//   `;
+
+//   myDiv.insertAdjacentHTML("beforeend", planetDiv);
+// }
+
+// Example 12
+// Destructuring and looping to have different id or class or data-id properties
+// class=${index}
+// id=${index}
+// data-id=${index}
+
+// const myDiv = document.getElementById("films");
+// const mySecondButton = document.getElementById("otherButton");
+
+// mySecondButton.addEventListener("click", getPlanets);
+
+// function getPlanets() {
+//   fetch(`https://swapi.dev/api/planets/`)
+//     .then((data) => data.json())
+//     .then((planets) => {
+//       processingPlanets(planets.results);
+//     });
+// }
+// // function to loop over the array
+
+// function processingPlanets(planetsArray) {
+//   console.log(planetsArray);
+//   for (const [index, prop] of planetsArray.entries()) {
+//     populatePlanets(prop, index);
+//   }
+// }
+
+// // Function to show
+// function populatePlanets(planetObj, index) {
+//   const { name, climate, terrain, population, orbital_period } = planetObj;
+
+//   const planetDiv = `
+//  <div class="planets" data-id=${index}>
+//  <h1>${name}</h1>
+//  <p>
+//  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
+//     population === "unknown"
+//       ? population
+//       : parseInt(population).toLocaleString()
+//   }. The orbital period is ${orbital_period} days.
+//  </p>
+//  </div>
+//   `;
+
+//   myDiv.insertAdjacentHTML("beforeend", planetDiv);
+// }
+
+// Example 13
+// highlight unpopulated planets
+
+// const myDiv = document.getElementById("films");
+// const mySecondButton = document.getElementById("otherButton");
+
+// mySecondButton.addEventListener("click", getPlanets);
+
+// function getPlanets() {
+//   fetch(`https://swapi.dev/api/planets/`)
+//     .then((data) => data.json())
+//     .then((planets) => {
+//       processingPlanets(planets.results);
+//     });
+// }
+// // function to loop over the array
+
+// function processingPlanets(planetsArray) {
+//   console.log(planetsArray);
+//   for (const [index, prop] of planetsArray.entries()) {
+//     populatePlanets(prop, index);
+//   }
+// }
+
+// // Function to show
+// function populatePlanets(planetObj, index) {
+//   const { name, climate, terrain, population, orbital_period } = planetObj;
+
+//   const planetDiv = `
+//  <div class="planets" data-id=${index} data-population=${population}>
+//  <h1>${name}</h1>
+//  <p>
+//  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
+//     population === "unknown"
+//       ? population
+//       : parseInt(population).toLocaleString()
+//   }. The orbital period is ${orbital_period} days.
+//  </p>
+//  </div>
+//   `;
+
+//   myDiv.insertAdjacentHTML("beforeend", planetDiv);
+// }
+
+// const highlight = document.getElementById("highlighter");
+
+// highlight.addEventListener("click", showunpopulated);
+
+// function showunpopulated() {
+//   const allPlanetDivs = document.querySelectorAll(".planets");
+//   for (const prop of allPlanetDivs) {
+//     // console.log(prop.dataset.population);
+//     if (prop.dataset.population === "unknown") {
+//       // prop.style.backgroundColor = "teal";
+//       prop.classList.toggle("highlight");
+//     }
+//   }
+// }
+
+// Example 14
+// To slide rating
 const myDiv = document.getElementById("films");
 const mySecondButton = document.getElementById("otherButton");
 
@@ -294,17 +443,28 @@ function getPlanets() {
 
 function processingPlanets(planetsArray) {
   console.log(planetsArray);
-  for (const prop of planetsArray) {
-    populatePlanets(prop);
+  for (const [index, prop] of planetsArray.entries()) {
+    populatePlanets(prop, index);
   }
 }
 
 // Function to show
-function populatePlanets(planetObj) {
+function populatePlanets(planetObj, index) {
   const { name, climate, terrain, population, orbital_period } = planetObj;
+  // Rating between low and high method here
+  let pop;
+  if (population > 0 && population <= 1000000) {
+    pop = "low";
+  } else if (population > 1000000 && population < 1000000000) {
+    pop = "medium";
+  } else if (population > 1000000000) {
+    pop = "high";
+  } else {
+    pop = "unknown";
+  }
 
   const planetDiv = `
- <div>
+ <div class="planets" data-id=${index} data-population=${pop}>
  <h1>${name}</h1>
  <p>
  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
@@ -317,4 +477,34 @@ function populatePlanets(planetObj) {
   `;
 
   myDiv.insertAdjacentHTML("beforeend", planetDiv);
+}
+
+const highlight = document.getElementById("highlighter");
+const allPlanetDivs = document.getElementsByClassName("planets");
+
+highlight.addEventListener("click", showunpopulated);
+
+function showunpopulated() {
+  for (const prop of allPlanetDivs) {
+    // console.log(prop.dataset.population);
+    if (prop.dataset.population === "unknown") {
+      // prop.style.backgroundColor = "teal";
+      prop.classList.toggle("highlight");
+    }
+  }
+}
+
+const selector = document.getElementById("selector");
+
+selector.addEventListener("change", highlightRating);
+
+function highlightRating(e) {
+  // console.log(e.target.value);
+  const { value } = e.target;
+  for (const prop of allPlanetDivs) {
+    prop.style.background = "white";
+    if (prop.dataset.population === value) {
+      prop.style.background = "teal";
+    }
+  }
 }
