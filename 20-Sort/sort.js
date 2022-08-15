@@ -1,5 +1,6 @@
 "use strict";
 
+// Example 1
 let employeesData = [
   {
     firstName: "John",
@@ -28,12 +29,18 @@ let employeesData = [
   },
 ];
 
-// Sort the array of object in ascending order
 employeesData.sort((z, o) => {
-  return z.age - o.age;
+  console.log(z.age + o.age);
 });
 
 // display the array using forEach
-employeesData.forEach((d) => {
-  console.log(`${d.firstName} ${d.lastName} ${d.age}`);
-});
+// employeesData.forEach((d) => {
+//   console.log(`${d.firstName} ${d.lastName} ${d.age}`);
+// });
+
+// Example 2
+// Sort will return ascending order of array
+// let a = [10, 7, 40, 3, 2, 1];
+// let b = a.sort();
+// b[2];
+// console.log(b);

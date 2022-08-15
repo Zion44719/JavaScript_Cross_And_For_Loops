@@ -1,5 +1,7 @@
 "use strict";
 
+const displayText = document.getElementById("display");
+
 let cityPopulation = [
   { cityName: "New York", population: 2345678 },
   { cityName: "London", population: 4567000 },
@@ -9,6 +11,12 @@ let cityPopulation = [
   { cityName: "San Francisco", population: 5000000 },
 ];
 
-cityPopulation.map((e) => {
-  console.log(e.cityName + ":" + e.population);
+// cityPopulation.map((e) => {
+//   console.log(e.cityName + ":" + e.population);
+// });
+
+let text = cityPopulation.map((e) => {
+  return e.cityName.toUpperCase() + ":" + e.population;
 });
+
+displayText.innerHTML = text;
