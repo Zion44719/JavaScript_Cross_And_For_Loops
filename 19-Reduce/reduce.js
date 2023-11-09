@@ -20,6 +20,7 @@ for (let i = 0; i < arrayNumber.length; i++) {
 let arrNum = [1, 2, 3, 4];
 
 let sumArr = arrNum.reduce((previousValue, currentValue) => {
+  console.log(`${previousValue} ${currentValue}`);
   return (previousValue += currentValue);
 });
 

@@ -50,11 +50,15 @@
 
 // console.log(message);
 
-// function add(a, b) {
-//   return a + b;
-// }
+let a = 5;
+let b = 7;
 
-// const addUp = add(5, 7);
+function add(a, b) {
+  return a + b;
+}
+
+const addUp = add(a, b);
+console.log(addUp)
 
 // console.log("Sum:", addUp);
 

@@ -450,7 +450,7 @@ function processingPlanets(planetsArray) {
 
 // Function to show
 function populatePlanets(planetObj, index) {
-  const { name, climate, terrain, population, orbital_period } = planetObj;
+  const { name, diameter, climate, terrain, population, orbital_period } = planetObj;
   // Rating between low and high method here
   let pop;
   if (population > 0 && population <= 1000000) {
@@ -467,6 +467,7 @@ function populatePlanets(planetObj, index) {
  <div class="planets" data-id=${index} data-population=${pop}>
  <h1>${name}</h1>
  <p>
+ ${diameter}
  ${name} has a climate that is: ${climate}. The terrain is ${terrain}, with a Population of ${
     population === "unknown"
       ? population

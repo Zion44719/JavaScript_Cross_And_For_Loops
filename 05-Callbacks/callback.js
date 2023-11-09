@@ -13,11 +13,11 @@ function shouldGoFirst(Callback) {
   }, 1000);
 }
 
-function shouldGSecond() {
+function shouldGoSecond() {
   console.log("I should go second");
 }
 
-// shouldGoFirst(shouldGSecond);
+// shouldGoFirst(shouldGoSecond);
 
 // Example 2
 function sumUpNums(num1, num2, cb) {

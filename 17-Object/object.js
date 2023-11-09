@@ -1,74 +1,78 @@
 "use strict";
-// // // console.log(zion.zionhilt());
-// // // console.log(zion.kin());
+// Accessing Object Using Box Notation
 
-// // // Using Dot Notation
-// // const name = zion.name;
-// // console.log(name);
 
-// // // Adding Using dot notation
-// // (zion.city = "Oklahoma"), (zion.age = 30);
-// // // console.log(`i am from ${zion.city} i'm ${zion.age}years`);
-// // // Delete from Object || Delete property
 
-// // const married = delete zion.married;
-// // console.log(married);
+// console.log(zion.zionhilt());
+// console.log(zion.kin());
 
-// // console.log(zion);
+// Accessing Object Using Dot Notation
+// const name = zion.name;
+// console.log(name);
 
-// // let kinCart = {
-// //   cartName: "classroom",
-// //   totalItem: 300,
-// //   averageItem: 30,
-// //   item2: ["book1", "book2", "book3"],
-// //   hillTop: function () {
-// //     console.log(hillTop);
-// //   },
-// // };
+// Adding Using dot notation
+// (zion.city = "Oklahoma"), (zion.age = 30);
+// console.log(`i am from ${zion.city} i'm ${zion.age}years`);
+// Delete from Object || Delete property
 
-// // Adding to the object
-// // kinCart.city = "Ado";
-// // kinCart.age = 20;
+// const married = delete zion.married;
+// console.log(married);
 
-// // console.log(kinCart.age);
-// // console.log(kinCart.hillTop);
+// console.log(zion);
 
-// // let kinCart = {
-// //   name: "Oluwafemi",
-// //   hobbie: "Aim and Target",
-// //   age: 00,
-// //   married: "yes",
-// //   items2: ["book1", "book2", "book3"],
-// //   zionhilt: function () {
-// //     (name = "bright"),
-// //       (x = 5),
-// //       (y = 10),
-// //       console.log(`my name is ${name} i am ${x + y}years old`);
-// //   },
-// //   kin: function () {
-// //     console.log(`work in progress`);
-// //   },
-// // };
+// let kinCart = {
+//   cartName: "classroom",
+//   totalItem: 300,
+//   averageItem: 30,
+//   item2: ["book1", "book2", "book3"],
+//   hillTop: function () {
+//     console.log(hillTop);
+//   },
+// };
 
-// // // // How to add to an object
-// // // (kinCart.age = 10),
-// // //   // How to delete from an Object
-// // //   (age = delete kinCart.age);
+// Adding to the object
+// kinCart.city = "Ado";
+// kinCart.age = 20;
 
-// // // console.log(kinCart);
-// // console.log(kinCart.zionhilt());
-// // console.log(kinCart.kin());
+// console.log(kinCart.age);
+// console.log(kinCart.hillTop);
 
-// // console.log(`my name is ${kinCart.name} and my hobbie is ${kinCart.hobbie}`);
+// let kinCart = {
+//   name: "Oluwafemi",
+//   hobbie: "Aim and Target",
+//   age: 00,
+//   married: "yes",
+//   items2: ["book1", "book2", "book3"],
+//   zionhilt: function () {
+//     (name = "bright"),
+//       (x = 5),
+//       (y = 10),
+//       console.log(`my name is ${name} i am ${x + y}years old`);
+//   },
+//   kin: function () {
+//     console.log(`work in progress`);
+//   },
+// };
 
-// // Assignment
-// // 1a. declare a variable kinplusAssignment of 5 arrays and add a number to the second index in the arrays
-// // 1b. remove from the fourth array using shift
+// How to add to an object
+// (kinCart.age = 10),
+  // How to delete from an Object
+//   (age = delete kinCart.age);
 
-// // 2. add age to your array of kinplusAssignment
-// // 3. declare a variable of object that has 3 function with an epression
-// // 4. declare a variable add to the marital status to the object
-// // 5. declare a variable and delete from the object using delimiters
+// console.log(kinCart);
+// console.log(kinCart.zionhilt());
+// console.log(kinCart.kin());
+
+// console.log(`my name is ${kinCart.name} and my hobbie is ${kinCart.hobbie}`);
+
+// Assignment
+// 1a. declare a variable kinplusAssignment of 5 arrays and add a number to the second index in the arrays
+// 1b. remove from the fourth array using shift
+
+// 2. add age to your array of kinplusAssignment
+// 3. declare a variable of object that has 3 function with an epression
+// 4. declare a variable add to the marital status to the object
+// 5. declare a variable and delete from the object using delimiters
 
 let isBoy = {
   name: "Kinplus",
@@ -89,7 +93,7 @@ let isBoy = {
 };
 
 // isBoy.zionHilt();
-// console.log(`My Hobbies ${isBoy.hobbies}`);
+// console.log(`My Hobbies are ${isBoy.hobbies}`);
 // console.log(isBoy.zionHilt());
 // console.log(isBoy.zion());
 

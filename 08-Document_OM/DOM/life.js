@@ -89,3 +89,10 @@ function login() {
     alert("incorrect detail");
   }
 }
+
+let loginPage = document.getElementById("login");
+
+loginPage.addEventListener("click", (e) => {
+  e.preventDefault();
+  login();
+});
